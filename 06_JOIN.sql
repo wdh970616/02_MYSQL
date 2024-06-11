@@ -1,11 +1,11 @@
--- JOIN
+/* JOIN */
 -- 여러개의 분산된 표를 조합해서 하나의 표로 만드는 기능
 -- 관계형 데이터베이스에서 가장 중요한 파트이다.
 
 -- 두개 이상 테이블을 관련있는 컬럼을 총해 결합하는데에 사용한다.
 -- 결합하는 테이블들은 반드시 연관있는 컬럼이 존재해야하며 이를 통새 JOIN 된 테이블들의 컬럼을 모두 확인할 수 있다.
 
--- ALIAS
+/* ALIAS */
 -- SQL의 컴럼 또는 테이블에 별칭을 달 수 있다.
 -- 별칭에 띄어쓰기나 특수기호가 없다면 as와 홀따옴표는 생략가능
 select menu_code  code,
@@ -34,7 +34,7 @@ from tbl_category b
          inner join tbl_menu a on a.category_code = b.category_code
 order by b.category_name;
 
--- USING
+/* USING */
 -- 비교할 컬럼명이 같을 경우 USING으로 서로 연관있는 컬럼에 대한 조건을 작성하여 JOIN 할수있다.
 select a.menu_name,
        b.category_name
