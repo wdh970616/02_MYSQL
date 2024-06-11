@@ -1,14 +1,11 @@
--- LIMIT
+/* LIMIT */
 -- SELECT문의 결과 집합에서 반환할 행의 수를 제한할 때 사용된다.
-/*
- LIMIT 사용법
- SELECT [columnName]
- FROM [tableName]
- LIMIT [offSet], [rowCount]
-
- offset : 시작할 행의 번호 (인덱스 체계)
- row count : 이후 행부터 반환 받을 행의 갯수
- */
+/* LIMIT 사용법 */
+#  SELECT [columnName]
+#  FROM [tableName]
+#  LIMIT [offSet], [rowCount]
+-- offset : 시작할 행의 번호 (인덱스 체계)
+-- row count : 이후 행부터 반환 받을 행의 갯수
 
 -- tbl_menu 테이블의 menu_code, menu_name, menu_price 조회
 -- menu_code 기준 내림차순 정렬
