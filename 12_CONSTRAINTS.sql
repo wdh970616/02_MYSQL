@@ -178,7 +178,7 @@ insert into user_check
 values (null, '유관순', '여', 17);
 
 /* DEFAULT */
--- 컬럼에 null 대신 기본 값 적용
+-- 컬럼에 null 대신 기본값 적용
 -- 컬럼 타입이 DATE일 시, current_date 만 가능
 -- DATETIME일 시,  current_time, current_timestamp, now() 모두 사용가능
 create table if not exists tbl_country
