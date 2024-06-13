@@ -1,18 +1,20 @@
+create database if not exists ogclass;
+
 drop table if exists class, favorite_subject;
 
 create table if not exists favorite_subject
 (
-    subject_no  int primary key auto_increment,
-    suject_name varchar(255) not null unique
+    subject_no   int primary key auto_increment,
+    subject_name varchar(255) not null unique
 );
 
-insert into favorite_subject
-values (1, 'JAVA'),
-       (2, 'MYSQL'),
-       (3, 'JDBC'),
-       (4, 'MYBATIS'),
-       (5, 'SPRING'),
-       (6, 'REACT');
+insert into favorite_subject (subject_name)
+values ('JAVA'),
+       ('MYSQL'),
+       ('JDBC'),
+       ('MYBATIS'),
+       ('SPRING'),
+       ('REACT');
 
 create table if not exists class
 (
@@ -38,11 +40,14 @@ values (5, '박태근', '남', 'Ohgiraffers-bear', 'bear.ohgiraffers@gmail.com',
        (4, '전유안', '여', 'euuuuuuan', 'euan.may24@gmail.com', null),
        (2, '박성은', '여', 'seongeun223', 'jklun080921@gmail.com', null),
        (6, '위성민', '남', 'wdh970616', 'wdh970616@naver.com', 'ENFP'),
-       (null, '박하얀', '남', 'parkhayarn', 's0224y92@gmail.com', null),
+       (null, '박하얀', '여', 'parkhayarn', 's0224y92@gmail.com', null),
        (2, '박효찬', '남', 'qwes5674', 'qwes5674@gmail.com', null),
-       (2, '이의정', '여', 'himisterlee', 'lejlej100418@gmail.com', null),
+       (2, '이의정', '남', 'himisterlee', 'lejlej100418@gmail.com', null),
        (2, '권은혜', '여', 'dmsgpk237', 'a01027947353@gmail.com', null),
        (2, '권보현', '남', 'Kwonbohyun', 'kwon18923@gmail.com', 'ENFP'),
        (2, '배하은', '남', 'HEun0420', 'usialeta@gmail.com', null),
        (5, '강연진', '여', 'kangyeonjin', 'yeonjin917n.n@gmail.com', null),
        (2, '강진영', '남', 'weed97', 'weed9935@gmail.com', 'INFP');
+
+select *
+from class;
