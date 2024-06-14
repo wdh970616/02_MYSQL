@@ -84,7 +84,7 @@ order by STUDENT_NAME;
 #14
 select substring(TERM_NO, 1, 4) 년도,
        substring(TERM_NO, 5, 2) 학기,
-       format(sum(POINT), 1)
+       format(avg(POINT), 1)
 from tb_grade
 where STUDENT_NO = 'A112113'
 group by 년도, 학기
