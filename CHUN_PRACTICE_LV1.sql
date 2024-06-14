@@ -23,12 +23,13 @@ from tb_department
 group by DEPARTMENT_NO;
 
 #3
-select a.STUDENT_NAME
-from tb_student a
-         join tb_department b using (DEPARTMENT_NO)
-where b.DEPARTMENT_NAME = '국어국문학과'
-  and substring(a.STUDENT_SSN, 8, 1) in (2, 4)
-  and a.ABSENCE_YN = 'Y';
+select A.STUDENT_NAME
+from tb_student A
+where A.DEPARTMENT_NO = (SELECT DEPARTMENT_NO
+                         FROM tb_department
+                         WHERE DEPARTMENT_NAME = '국어국문학과')
+  and substring(A.STUDENT_SSN, 8, 1) in (2, 4)
+  and A.ABSENCE_YN = 'Y';
 
 #4
 select STUDENT_NAME
